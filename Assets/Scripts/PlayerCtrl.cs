@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
         {
             m_JumpPwr = 0f;
         }
-        Vector3 m_Input = new Vector3(Input.GetAxis("Horizontal"), 1, Input.GetAxis("Vertical"));
+        Vector3 m_Input = new Vector3(Input.GetAxis("Horizontal"), m_JumpPwr, Input.GetAxis("Vertical"));
         
         Vector3 m_Movement = m_Input * m_Speed * Time.fixedDeltaTime;
         m_Rigidbody.MovePosition(m_Rigidbody.position + m_Movement);
